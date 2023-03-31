@@ -37,7 +37,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD        
     - name: Build docker
       run: |
-        docker build -t devco/fast-api-example:latest . && docker images -a
+        docker build -t devco/fast-api-example:latest rduarteg/test:v1 . 
     - name: Push dockerhub
       run: |
-        docker push ${{secrets.DOCKER_USER}}/test:devco/fast-api-example
+        docker push ${{secrets.DOCKER_USER}}/test:v1
