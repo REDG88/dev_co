@@ -40,4 +40,4 @@ jobs:
         docker build -t devco/fast-api-example:latest . && docker images -a
     - name: Push dockerhub
       run: |
-        docker push ${{secrets.DOCKER_USER}}/test
+        docker push ${{secrets.DOCKER_USER}}/devco/fast-api-example:latest
